@@ -1,66 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenario - Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="assets/logo.jpg" alt="Scenario Restaurant"></a>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<!DOCTYPE html><html><head>
-<title>Scenario - Menu</title>
-<link rel="stylesheet" href="style.css">
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-</head><body>
-<header>
-<a href="index.html"><img src="assets/logo.jpg"></a>
-<nav>
-<a href="index.html">Accueil</a>
-<a href="menu.html">Menu</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
+    <div class="container">
+        <h1>Notre Menu</h1>
 
-<div class="container">
-<h1>Menu</h1>
+        <div class="menu-grid">
+            <div class="section">
+                <h2>Entrées</h2>
+                
+                <div class="menu-item">
+                    <h3>Tartare de Saumon Bio</h3>
+                    <p>Saumon norvégien, avocat, citron vert et fines herbes</p>
+                    <div class="model-placeholder">
+                        <!--
+                        <model-viewer src="[LIEN_GLB_ICI]" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
+                        -->
+                        <strong>Visualisation 3D :</strong> Ajoutez votre lien GLB dans le tag ci-dessus.
+                    </div>
+                </div>
 
-<div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Foie Gras Maison</h3>
+                    <p>Foie gras de canard, chutney de figues et pain brioché toasté</p>
+                    <div class="model-placeholder">
+                        <!--
+                        <model-viewer src="[LIEN_GLB_ICI]" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
+                        -->
+                        <strong>Visualisation 3D :</strong> Ajoutez votre lien GLB.
+                    </div>
+                </div>
+            </div>
 
-<div class="section">
-<h2>[Nom de la Section]</h2>
-<ul>
-<li>[Nom du Plat]
-<div class="model-placeholder">
-<!--
-<model-viewer src="[LIEN_GLB_ICI]" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
--->
-<strong>Espace 3D :</strong> Ajoutez votre lien GLB dans le tag ci‑dessus.
-</div>
-</li>
+            <div class="section">
+                <h2>Plats Principaux</h2>
+                
+                <div class="menu-item">
+                    <h3>Filet de Boeuf Wagyu</h3>
+                    <p>Filet de boeuf wagyu A5, purée de céleri-rave et jus réduit au vin rouge</p>
+                    <div class="model-placeholder">
+                        <!--
+                        <model-viewer src="[LIEN_GLB_ICI]" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
+                        -->
+                        <strong>Visualisation 3D :</strong> Ajoutez votre lien GLB.
+                    </div>
+                </div>
 
-<li>[Nom du Plat]
-<div class="model-placeholder">
-<!--
-<model-viewer src="[LIEN_GLB_ICI]" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
--->
-<strong>Espace 3D :</strong> Ajoutez votre lien GLB.
-</div>
-</li>
-</ul>
-</div>
+                <div class="menu-item">
+                    <h3>Bar de Ligne Rôti</h3>
+                    <p>Bar de ligne, artichauts poivrade et émulsion au citron yuzu</p>
+                    <div class="model-placeholder">
+                        <!--
+                        <model-viewer src="[LIEN_GLB_ICI]" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
+                        -->
+                        <strong>Visualisation 3D :</strong> Ajoutez votre lien GLB.
+                    </div>
+                </div>
+            </div>
 
-<div class="section">
-<h2>[Nom de la Section]</h2>
-<ul>
-<li>[Nom du Plat]
-<div class="model-placeholder">
-<!--
-<model-viewer src="[LIEN_GLB_ICI]" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
--->
-<strong>Espace 3D :</strong> Ajoutez votre lien GLB.
-</div>
-</li>
-</ul>
-</div>
+            <div class="section">
+                <h2>Desserts</h2>
+                
+                <div class="menu-item">
+                    <h3>Sphère Chocolat Grand Cru</h3>
+                    <p>Sphère de chocolat noir 70%, cœur framboise et sorbet passion</p>
+                    <div class="model-placeholder">
+                        <!--
+                        <model-viewer src="[LIEN_GLB_ICI]" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
+                        -->
+                        <strong>Visualisation 3D :</strong> Ajoutez votre lien GLB.
+                    </div>
+                </div>
 
-<div class="section">
-<h2>Ajouter une nouvelle section ici</h2>
-<p>Dupliquez ce bloc pour créer plus de sections.</p>
-</div>
+                <div class="menu-item">
+                    <h3>Soufflé Grand Marnier</h3>
+                    <p>Soufflé léger au Grand Marnier, glace vanille de Madagascar</p>
+                    <div class="model-placeholder">
+                        <!--
+                        <model-viewer src="[LIEN_GLB_ICI]" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
+                        -->
+                        <strong>Visualisation 3D :</strong> Ajoutez votre lien GLB.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-</div>
-</div>
-
-</body></html>
+    <footer>
+        <p>&copy; 2023 Scenario Restaurant. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
