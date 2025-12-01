@@ -288,4 +288,91 @@
                 </div>
             </div>
             
-            <!-- Section
+            <!-- Section Desserts -->
+            <div class="collapsible-section" id="desserts">
+                <div class="section-header" onclick="toggleSection('desserts')">
+                    <h2>Desserts</h2>
+                    <div class="section-toggle">+</div>
+                </div>
+                <div class="section-content">
+                    <div class="menu-item">
+                        <h3>Crème Brûlée</h3>
+                        <p></p>
+                        <p class="price">Prix : 2500 Da</p>
+                        <div class="model-placeholder">
+                            <!--
+                            <model-viewer src="[LIEN_GLB_ICI]" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
+                            -->
+                            <strong>Visualisation 3D :</strong> Ajoutez votre lien GLB.
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <h3>Fondant au Chocolat</h3>
+                        <p></p>
+                        <p class="price">Prix : 1900 Da</p>
+                        <div class="model-placeholder">
+                            <!--
+                            <model-viewer src="[LIEN_GLB_ICI]" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
+                            -->
+                            <strong>Visualisation 3D :</strong> Ajoutez votre lien GLB.
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <h3>Tiramisu</h3>
+                        <p></p>
+                        <p class="price">Prix : 2800 Da</p>
+                        <div class="model-placeholder">
+                            <!--
+                            <model-viewer src="[LIEN_GLB_ICI]" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
+                            -->
+                            <strong>Visualisation 3D :</strong> Ajoutez votre lien GLB.
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <h3>Flan Caramel</h3>
+                        <p></p>
+                        <p class="price">Prix : 1600 Da</p>
+                        <div class="model-placeholder">
+                            <!--
+                            <model-viewer src="[LIEN_GLB_ICI]" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
+                            -->
+                            <strong>Visualisation 3D :</strong> Ajoutez votre lien GLB.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Scenario Restaurant. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const content = section.querySelector('.section-content');
+            const toggle = section.querySelector('.section-toggle');
+            
+            // Toggle l'état de la section
+            content.classList.toggle('expanded');
+            
+            // Changer le symbole +/-
+            if (content.classList.contains('expanded')) {
+                toggle.textContent = '−'; // Moins
+            } else {
+                toggle.textContent = '+'; // Plus
+            }
+        }
+        
+        // Optionnel : Ouvrir une section par défaut au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ouvrir la première section par défaut
+            toggleSection('entrees-froides');
+        });
+    </script>
+</body>
+</html>
