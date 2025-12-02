@@ -325,10 +325,11 @@ model-viewer {
     line-height: 1.6;
 }
 
+/* ===== STYLES POUR LES ICÔNES SOCIALES ===== */
 .social-media {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     margin-top: 30px;
     margin-bottom: 40px;
 }
@@ -337,23 +338,75 @@ model-viewer {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: rgba(212, 175, 55, 0.1);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    width: 65px; /* Grande taille */
+    height: 65px; /* Grande taille */
+    background: rgba(212, 175, 55, 0.15); /* Fond doré */
+    border: 2px solid var(--gold); /* Bordure dorée solide */
     border-radius: 50%;
-    color: var(--gold);
-    font-size: 1.5rem;
+    color: var(--gold); /* Couleur dorée */
+    font-size: 2rem; /* Grande taille de l'icône */
     transition: all 0.3s ease;
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
 }
 
 .social-icon:hover {
-    background: rgba(212, 175, 55, 0.2);
-    border-color: var(--gold);
+    background: rgba(212, 175, 55, 0.25);
+    border-color: var(--light-gold);
     color: var(--light-gold);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+    transform: translateY(-5px) scale(1.1); /* Effet de zoom */
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+}
+
+/* Effet de brillance dorée au survol */
+.social-icon::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 215, 0, 0.3) 50%, /* Dégradé doré */
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.social-icon:hover::after {
+    opacity: 1;
+    animation: shine 1.5s ease;
+}
+
+/* Animation de pulsation dorée */
+@keyframes pulse-gold {
+    0% { 
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); 
+    }
+    70% { 
+        box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); 
+    }
+    100% { 
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); 
+    }
+}
+
+.social-icon:hover {
+    animation: pulse-gold 1.5s infinite;
+}
+
+@keyframes shine {
+    0% { 
+        transform: translateX(-100%) translateY(-100%) rotate(45deg); 
+    }
+    100% { 
+        transform: translateX(100%) translateY(100%) rotate(45deg); 
+    }
 }
 
 /* ===== STYLES POUR LES IFRAMES ET FORMULAIRES ===== */
@@ -471,6 +524,17 @@ footer {
     color: #cfae5a;
 }
 
+footer a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--light-gold);
+    text-decoration: underline;
+}
+
 /* ===== STYLES RESPONSIVE ===== */
 @media (max-width: 768px) {
     .container {
@@ -539,6 +603,12 @@ footer {
     iframe {
         height: 300px;
     }
+    
+    .social-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.7rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -555,12 +625,12 @@ footer {
     }
     
     .social-media {
-        gap: 15px;
+        gap: 20px;
     }
     
     .social-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
     }
 }
