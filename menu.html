@@ -1,11 +1,301 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<title>Menu - Maison Le Sept</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Maison Le Sept</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background:black; text-align:center;">
-<a href="index.html"><img src="logo.png" alt="Logo" style="width:200px;"></a>
-<h1 style="color:white;">Menu</h1>
-<p style="color:white;">Nos plats seront affichés ici.</p>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="logo.png" alt="Maison Le Sept" class="logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="contact.html">Contact & Réservations</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu Header -->
+    <section class="menu-header">
+        <div class="container">
+            <h1 class="text-gold">Notre Menu</h1>
+            <p>Découvrez nos créations gastronomiques, où chaque plat est une œuvre d'art en 3D</p>
+            <div class="divider"></div>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Tout voir</button>
+                <button class="category-btn" data-category="entrees">Entrées</button>
+                <button class="category-btn" data-category="plats">Plats Principaux</button>
+                <button class="category-btn" data-category="desserts">Desserts</button>
+                <button class="category-btn" data-category="boissons">Boissons</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Sections -->
+    <section class="menu-sections">
+        <div class="container">
+            <!-- Entrées Section -->
+            <div class="menu-section" data-category="entrees">
+                <div class="section-header">
+                    <h2 class="section-title">Entrées</h2>
+                </div>
+                
+                <div class="dish" data-dish="foie-gras">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                            alt="Foie Gras de Canard"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Foie Gras de Canard</h3>
+                            <div class="dish-price">38€</div>
+                        </div>
+                        <p class="dish-desc">Foie gras de canard des Landes mi-cuit, gelée de Sauternes et pain d'épices toasté.</p>
+                        <p class="dish-ingredients">Foie gras de canard, Sauternes, pain d'épices, fleur de sel</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="langoustines">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                            alt="Langoustines Royales"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Langoustines Royales</h3>
+                            <div class="dish-price">42€</div>
+                        </div>
+                        <p class="dish-desc">Langoustines juste saisies, caviar Osciètre, émulsion légère au citron yuzu.</p>
+                        <p class="dish-ingredients">Langoustines, caviar Osciètre, citron yuzu, crème fraîche</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Plats Principaux Section -->
+            <div class="menu-section" data-category="plats">
+                <div class="section-header">
+                    <h2 class="section-title">Plats Principaux</h2>
+                </div>
+                
+                <div class="dish" data-dish="bar-de-ligne">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                            alt="Bar de Ligne"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Bar de Ligne Rôti</h3>
+                            <div class="dish-price">68€</div>
+                        </div>
+                        <p class="dish-desc">Bar de ligne rôti à la peau croustillante, artichauts poivrade et jus réduit au vin blanc.</p>
+                        <p class="dish-ingredients">Bar de ligne, artichauts, vin blanc, beurre monté</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pigeon">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                            alt="Pigeon de Bresse"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Pigeon de Bresse</h3>
+                            <div class="dish-price">74€</div>
+                        </div>
+                        <p class="dish-desc">Pigeon de Bresse rôti, foie gras poêlé, chanterelles et jus au Porto vintage.</p>
+                        <p class="dish-ingredients">Pigeon de Bresse, foie gras, chanterelles, Porto vintage</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desserts Section -->
+            <div class="menu-section" data-category="desserts">
+                <div class="section-header">
+                    <h2 class="section-title">Desserts</h2>
+                </div>
+                
+                <div class="dish" data-dish="souffle">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                            alt="Soufflé Grand Marnier"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Soufflé Grand Marnier</h3>
+                            <div class="dish-price">24€</div>
+                        </div>
+                        <p class="dish-desc">Soufflé onctueux parfumé au Grand Marnier, servi avec sa crème anglaise à la vanille de Tahiti.</p>
+                        <p class="dish-ingredients">Œufs, Grand Marnier, vanille de Tahiti, sucre</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="chocolat">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                            alt="Délice Chocolat Guanaja"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Délice Chocolat Guanaja</h3>
+                            <div class="dish-price">26€</div>
+                        </div>
+                        <p class="dish-desc">Délice fondant au chocolat Guanaja 70%, sorbet passion et croustillant praliné.</p>
+                        <p class="dish-ingredients">Chocolat Guanaja, fruits de la passion, praliné, crème</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Boissons Section -->
+            <div class="menu-section" data-category="boissons">
+                <div class="section-header">
+                    <h2 class="section-title">Sélection de Vins</h2>
+                </div>
+                
+                <div class="dish" data-dish="bourgogne">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                            alt="Bourgogne Blanc"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Bourgogne Blanc 2019</h3>
+                            <div class="dish-price">85€</div>
+                        </div>
+                        <p class="dish-desc">Domaine Coche-Dury, Bourgogne Blanc. Notes de citron, noisette et minéralité prononcée.</p>
+                        <p class="dish-ingredients">Chardonnay</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="bordeaux">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                            alt="Bordeaux Rouge"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Château Margaux 2015</h3>
+                            <div class="dish-price">420€</div>
+                        </div>
+                        <p class="dish-desc">Premier Grand Cru Classé. Élégance, complexité et longueur exceptionnelle.</p>
+                        <p class="dish-ingredients">Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tasting Menu -->
+    <section class="tasting-menu">
+        <div class="container">
+            <h2 class="text-gold">Menu Dégustation</h2>
+            <p>Une expérience gastronomique complète en 7 services, incluant une sélection des plus grandes créations de notre chef.</p>
+            <p><strong>185€ par personne</strong> | <em>Accord mets-vins supplément: 95€</em></p>
+            <a href="contact.html" class="btn btn-gold" style="margin-top: 20px;">Réserver le menu dégustation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="copyright">© 2023 Maison Le Sept. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filter menu items by category
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const menuSections = document.querySelectorAll('.menu-section');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide menu sections based on category
+                    menuSections.forEach(section => {
+                        if (category === 'all' || section.getAttribute('data-category') === category) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
